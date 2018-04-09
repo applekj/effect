@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Marquee</title>
+	<style type="text/css">
+	  *{
+	  	padding: 0;
+	  	margin: 0;
+	  	border: 0;
+	  }
+	  .out{
+	  	width: 200px;
+	  	height: 30px;
+	  	overflow: hidden;
+	  }
+	  .con{
+	  	width: 500px;
+	  	height: 30px;
+	  	/*overflow: hidden;*/
+	  	animation: scrollLeft 8s linear infinite normal;
+	  	animation-fill-mode: forwards;
+	  }
+	  .con:hover{
+	  	animation-play-state: paused;
+	  	-webkit-animation-play-state:paused;
+	  }
+	  .con li {
+	  	line-height: 30px;
+	  	float: left;
+	  	width: 100px;
+	  	text-align: center;
+	  	list-style: none;
+	  }
+	  /*定义动画*/
+	  @keyframes scrollLeft{
+	  	0%{
+	  		transform: translate3d(0,0,0);
+	  	}
+	  	100%{
+	  		transform: translate3d(-300px,0,0);
+	  	}
+	  }
+
+	  .test_padding{
+	  	offsetWidth:300px;
+	  	width: 200px;
+	  	height: 50px;
+	  	background-color: blue;
+	  	padding: 10px;
+	  }
+
+	  .test_padding .inner_div {
+      width: 100%;
+      height: 100%;
+      background-color: red;
+	  }
+	</style>
+</head>
+<body>
+	<div class="out">
+	  <ul class="con">
+	  	<li>开始</li>
+	  	<li>yiyiyiyi</li>
+	  	<li>yioyioyioyio</li>
+	  	<li>开始</li>
+	  	<li>yiyiyiyi</li>
+	  </ul>
+  </div>
+
+  <div class="test_padding">
+  	<div class="inner_div" id="inner_div"></div>
+  </div>
+</body>
+</html>
